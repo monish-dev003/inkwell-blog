@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply font-sans bg-slate-50 text-slate-900 antialiased; }
+  h1,h2,h3,h4,h5,h6 { @apply font-sans font-bold; }
+}
+
+@layer components {
+  .btn-primary   { @apply bg-primary-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-secondary { @apply bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-lg font-semibold hover:bg-slate-50 transition-colors; }
+  .btn-danger    { @apply bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition-colors; }
+  .input-field   { @apply w-full border border-slate-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition bg-white; }
+  .card          { @apply bg-white rounded-xl border border-slate-100 shadow-sm; }
+  .badge         { @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium; }
+}
+
+/* Post content */
+.post-content { @apply font-serif text-slate-800 leading-relaxed; }
+.post-content h1,.post-content h2,.post-content h3 { @apply font-sans font-bold mt-8 mb-4; }
+.post-content h1 { @apply text-3xl; }
+.post-content h2 { @apply text-2xl; }
+.post-content h3 { @apply text-xl; }
+.post-content p  { @apply mb-4 text-lg; }
+.post-content a  { @apply text-primary-600 hover:underline; }
+.post-content ul,.post-content ol { @apply mb-4 pl-6; }
+.post-content li { @apply mb-2; }
+.post-content ul li { @apply list-disc; }
+.post-content ol li { @apply list-decimal; }
+.post-content blockquote { @apply border-l-4 border-primary-500 pl-4 italic text-slate-600 my-6; }
+.post-content code { @apply bg-slate-100 text-slate-800 px-1 py-0.5 rounded text-sm font-mono; }
+.post-content pre { @apply bg-slate-900 text-slate-100 rounded-xl p-4 my-6 overflow-x-auto; }
+.post-content pre code { @apply bg-transparent text-slate-100 p-0; }
+.post-content img { @apply rounded-xl max-w-full my-6; }
+
+/* Skeleton animation */
+.skeleton { @apply bg-slate-200 rounded animate-pulse; }
+
+/* Read progress */
+#read-progress { position: fixed; top: 0; left: 0; height: 3px; background: #4F46E5; transition: width 0.1s; z-index: 9999; }
